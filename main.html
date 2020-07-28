@@ -19,6 +19,7 @@
 				<div class="inner">
 					<nav>
 						<ul>
+							<li><a href="http://hackathon-dashboard-node.herokuapp.com">Dashboard</a></li>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">Tips for preventing Cyberbullying</a></li>
 							<li><a href="#two">Technologies used</a></li>
@@ -192,25 +193,26 @@
 							<p>Have a query? You can easily get in touch with us by filling this form</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#4">
+									<form id="contactForm">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<input type="text" name="name" id="name" required />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="email" name="email" id="email" required />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Submit Query</a></li>
+											<input type="submit"/>
 										</ul>
 									</form>
+									<div class="alert">Query submitted,we'll get in touch with you soon :)</div>
 								</section>
 								<section>
 									<ul class="contact">
@@ -257,6 +259,9 @@
 			
 
 		<!-- Scripts -->
+			<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+			<script src="main.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
